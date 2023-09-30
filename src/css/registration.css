@@ -1,0 +1,78 @@
+* {
+
+    margin: 2px;
+    margin-right: 10px;
+}
+
+.maincon {
+    width: 40%;
+    border: 2px solid black;
+    position: relative;
+    left: 60%;
+    height: 95vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.maintopic {
+    text-align: center;
+    padding: 5px;
+    font-family: cursive;
+}
+
+.nameFileds {
+    margin-left: 5%;
+    font-size: 20px;
+
+}
+
+.fileds {
+    margin-top: 30px;
+    width: 50%;
+    margin-left: 5%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.fileds:hover{
+   border: 3px solid #31b4f5;
+}
+
+.btn {
+    margin-top: 3%;
+    margin-left: 20px;
+    width: 90%;
+    height: 6vh;
+    font-size: 15px;
+    border-radius: 25px;
+    border: 2px solid #2e4ce6;
+    background-color: #d86ceb;
+    font-weight: 600;
+
+}
+
+.btn:hover {
+    background-color: #d00cf2;
+    cursor: pointer;
+    color: white;
+
+}
+
+.already{
+
+    margin-top: 2%;
+    margin-left: 20%;
+}
+
+.logintext{
+
+    color: #0f9ee6;
+    text-decoration: underline;
+
+}
+
+.logintext:hover{
+    color: #04a3f3;
+    cursor: pointer;
+
+}
