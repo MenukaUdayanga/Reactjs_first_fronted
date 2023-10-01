@@ -20,32 +20,26 @@ function Registration() {
   
  
 
-    const handle = () => {
+const handle = () => {
+    // Check password equality
+    if (repassword !== password) {
+        setError('The password does not match the Re-enter password.');
+        setFormReady(false);
+        return;
+    }
 
-        // Check password equality
-        if (repassword !==password) {
-            setError('The password does not match the Re-enter password.');
-            setFormReady(false);
-            return;
-        }
+    // Empty input handling
+    if (!name || !email || !phone || !username || !password) {
+        setError('All the fields are required.');
+        setFormReady(false);
+        return;
+    }
 
+    // Hash the user's password
+    const saltRounds = 10;
 
-        // Empty input handling
-        if (!name || !email || !phone || !username || !password) {
-            setError('All the fields are required.');
-            setFormReady(false);
-
-            return;
-
-        }
-        
-
-            // If There is previous error, clear it
-            setError('');
-
-
-            
-
+    bcrypt.hash(password, saltRounds)
+        .then((hashedPassword) => {
             // Continue with the fetch request
             fetch('http://localhost:3000/api/user/register', {
                 method: 'POST',
@@ -54,31 +48,34 @@ function Registration() {
                     email: email,
                     phone: phone,
                     username: username,
-                    password: password,
+                    password: hashedPassword, // Use the hashed password here
                 }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             })
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then((json) => {
-                    console.log(json);
-                    // Data saved successfully
-                    setFormReady(false); // Set formReady to true after successful registration
-                    
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((json) => {
+                console.log(json);
+                // Data saved successfully
+                setFormReady(true); // Set formReady to true after successful registration
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Handle errors and display an error message to the user
+            });
+        })
+        .catch((error) => {
+            console.error('Error hashing password:', error);
+            // Handle errors related to password hashing
+        });
+};
 
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    // Handle errors and display an error message to the user
-                });
-        
-    };
 
     
     return (
