@@ -2,16 +2,18 @@
 
     margin: 2px;
     margin-right: 10px;
+    overflow: hidden;
 }
 
 .maincon {
     width: 40%;
-    border: 2px solid black;
     position: relative;
     left: 60%;
     height: 95vh;
     margin-top: 2vh;
     margin-bottom: 2vh;
+   background-color:#b4aeaf;
+   
 }
 
 .maintopic {
@@ -32,6 +34,9 @@
     margin-left: 5%;
     height: 30px;
     font-size: 15px;
+    border: 2px solid rgb(172, 67, 185);
+    border-radius: 25px;
+    text-align: center;
 }
 
 .fileds:hover{
@@ -76,3 +81,19 @@
     cursor: pointer;
 
 }
+
+.error{
+
+    color:red;
+    margin-top: 2%;
+    margin-left: 10%;
+    
+}
+
+.cimage{
+    position: relative;
+    bottom: 604px;
+  
+  
+}
+

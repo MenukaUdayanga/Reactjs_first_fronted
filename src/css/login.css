@@ -1,0 +1,45 @@
+.box {
+
+    width: 40%;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    background-color: #b4aeaf;
+}
+
+.mtext {
+
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 5%;
+    font-family: cursive;
+    margin-bottom: 10%;
+    
+}
+
+.nameFi {
+
+    font-family: cursive;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+
+}
+
+.inFileds {
+    width: 65%;
+    margin-left: 15%;
+    height: 5vh;
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(219, 231, 231);
+    border: 2px solid rgb(172, 67, 185);
+    font-size: 15px;
+}
+
+.inFileds:hover{
+    
+    border: 3px solid #31b4f5;
+}
