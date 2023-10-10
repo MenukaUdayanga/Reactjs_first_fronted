@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import '../css/login.css'
 import '../components/LoginButton'
 import LoginButton from '../components/LoginButton'
@@ -10,10 +10,14 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [ready, setReady] = useState(false);
-  
+  const [error, setError] = useState('');
+
 
 
   const handleLogin = () => {
+
+
+
 
     fetch('http://localhost:3000/api/login/userlogin', {
       method: 'POST',
@@ -32,8 +36,8 @@ function Login() {
         if (response.ok) {
 
           setReady(true);
-          
-         
+
+
 
           // Login was successful, you can handle the response here
           return response.json();
@@ -44,7 +48,7 @@ function Login() {
           setReady(false);
 
           throw new Error('Login failed');
-        
+
 
         }
 
@@ -62,7 +66,7 @@ function Login() {
 
   }
 
-  
+
 
   return (
     <>
@@ -72,14 +76,22 @@ function Login() {
         <h1 className='mtext'>User Login</h1>
 
         <h3 className='nameFi'>Enter Email Address</h3>
-        <input className='inFileds' type="text" placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input className='inFileds' type="text" placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)} required />
 
         <h3 className='nameFi'>Password</h3>
-        <input className='inFileds' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input className='inFileds' type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-        <a href={ready?'/dashboard' : '#'} onClick={handleLogin}>
-                    <button >Login</button>
-                </a>
+        <h4 className='error'>{error}</h4>
+        {/* 
+        <a href={ready ? '/dashboard' : '#'} onClick={handleLogin()}>
+          <button>Login</button>
+        </a> */}
+
+
+        <a href={ready ? '/dashboard' : '#'} onClick={handleLogin()}>
+          <LoginButton />
+        </a>
+
 
 
 

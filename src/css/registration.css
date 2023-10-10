@@ -9,10 +9,10 @@
     width: 40%;
     position: relative;
     left: 60%;
-    height: 95vh;
+    height: 100vh;
     margin-top: 2vh;
     margin-bottom: 2vh;
-   background-color:#b4aeaf;
+    background-color:#b4aeaf;
    
 }
 
@@ -92,7 +92,7 @@
 
 .cimage{
     position: relative;
-    bottom: 604px;
+    bottom: 612px;
   
   
 }

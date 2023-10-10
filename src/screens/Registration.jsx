@@ -6,7 +6,6 @@ import regPhoto from "../assets/cloth.jpg";
 
 
 
-
 function Registration() {
 
     const [name, setName] = useState('');
@@ -130,7 +129,7 @@ function Registration() {
            
 
            
-            <img className='cimage' src={regPhoto} alt="React Logo" style={{ width: '60%', height: '95vh' }} />
+            <img className='cimage' src={regPhoto} alt="React Logo" style={{ width: '60%', height: '100vh' }} />
             
          
 
