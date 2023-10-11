@@ -3,6 +3,7 @@ import '../css/login.css'
 import '../components/LoginButton'
 import LoginButton from '../components/LoginButton'
 import { Link } from "react-router-dom";
+import regPhoto from "../assets/cloth.jpg";
 
 
 function Login() {
@@ -69,7 +70,11 @@ function Login() {
 
 
   return (
-    <>
+    < >
+   
+   <div style={{backgroundColor:'#df5fe3',height:'100vh'}}>
+
+    
 
       <div className='box'>
 
@@ -87,13 +92,18 @@ function Login() {
           <button>Login</button>
         </a> */}
 
+       <p  className='already'>Don't You have an account..?<Link to='/register'><span className='logintext'>Register now</span></Link></p>
 
         <a href={ready ? '/dashboard' : '#'} onClick={handleLogin()}>
-          <LoginButton />
+          <LoginButton linkname="Login"/>
         </a>
 
 
 
+
+      </div>
+
+      
 
       </div>
     </>
