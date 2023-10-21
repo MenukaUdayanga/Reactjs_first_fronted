@@ -89,27 +89,27 @@ function Registration() {
           
                 <h1 className='maintopic'>User Registration</h1>
 
-                <label style={{ padding: '14px' }} className='nameFileds'>First Name</label>
+               
                 <input className='fileds' placeholder='First Name' type="text" value={name} onChange={(e) => setName(e.target.value)} />
 
                 <br></br>
-                <label style={{ padding: '33px' }} className='nameFileds'>Email </label>
+                
                 <input className='fileds' placeholder='Email' type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
                 <br></br>
-                <label className='nameFileds'>Phone Number</label>
+              
                 <input className='fileds' placeholder='Phone Number' type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
 
                 <br></br>
-                <label style={{ padding: '17px' }} className='nameFileds'>UserName</label>
+                
                 <input className='fileds' placeholder='UserName' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
 
                 <br></br>
-                <label style={{ padding: '22px' }} className='nameFileds'>Password</label>
+                
                 <input className='fileds' placeholder='password' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
                 <br></br>
-                <label style={{ padding: '8px' }} className='nameFileds'>Re-Password</label>
+               
                 <input className='fileds' placeholder='Re-Password' type="password" value={repassword} onChange={(e) => setRepassword(e.target.value)} />
 
                 <p className='already'>Already if you have a account.?<Link to='/login'><span className='logintext'>Login Now</span></Link></p>

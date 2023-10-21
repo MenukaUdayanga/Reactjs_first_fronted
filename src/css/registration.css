@@ -3,6 +3,7 @@
     margin: 2px;
     margin-right: 10px;
     overflow: hidden;
+    font-family: serif, sans-serif;
 }
 
 .maincon {
@@ -13,6 +14,7 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
     background-color:#b4aeaf;
+    
    
 }
 
@@ -29,14 +31,15 @@
 }
 
 .fileds {
-    margin-top: 30px;
-    width: 50%;
-    margin-left: 5%;
-    height: 30px;
+    margin-top: 35px;
+    width: 60%;
+    margin-left: 18%;
+    height: 35px;
     font-size: 15px;
     border: 2px solid rgb(172, 67, 185);
     border-radius: 25px;
     text-align: center;
+   
 }
 
 .fileds:hover{
@@ -44,7 +47,7 @@
 }
 
 .btn {
-    margin-top: 3%;
+    margin-top: 2%;
     margin-left: 20px;
     width: 90%;
     height: 6vh;
@@ -92,7 +95,7 @@
 
 .cimage{
     position: relative;
-    bottom: 612px;
+    bottom: 635px;
   
   
 }

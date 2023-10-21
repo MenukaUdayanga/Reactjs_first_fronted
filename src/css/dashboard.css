@@ -1,0 +1,12 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.con {
+
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(196, 219, 200);
+}
